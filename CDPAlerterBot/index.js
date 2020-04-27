@@ -20,9 +20,10 @@ var app = express()
 app.get('/CDPAlerter', function (req, res) {
   res.send('Bot is Online');
 })
-app.get('/CDPAlerter/send/:msg', (req, res) => {
+app.get('/CDPAlerter/send/:chatid/:msg', (req, res) => {
   const msg= req.params.msg
-  bot.telegram.sendMessage(CHAT_ID, msg)
+  const chatid = req.params.chatid
+  bot.telegram.sendMessage(chatid, msg)
   res.send("Message Sent: " + msg);
 })
 

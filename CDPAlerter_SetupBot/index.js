@@ -79,7 +79,7 @@ const initializeVaultData = new WizardScene(
     console.log("CDP limit:", cdpLimit, "VaultNo:", vaultNo);
 
     users.create({
-      userid: ctx.chat.id,
+      chatid: ctx.chat.id,
       vault: vaultNo,
       threshold: cdpLimit
     })

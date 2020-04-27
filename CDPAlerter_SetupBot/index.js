@@ -12,7 +12,7 @@ if(process.env.BOT_TOKEN === null){
 
 
 const BOT_TOKEN = process.env.BOT_TOKEN || "";
-const URL = process.env.URL; // get the Heroku config var URL
+const URL = process.env.URL; // get the server config var URL
 const PORT = process.env.PORT || 2000;
 const CHAT_ID = process.env.CHAT_ID;
 
@@ -21,7 +21,7 @@ axios.get(`https://api.telegram.org/bot${BOT_TOKEN}/deleteWebHook`);
 
 const bot = new Telegraf(BOT_TOKEN); // get the token from envirenment variable
 
-// Config the webhook for heroku
+// Config the webhook for server
 // bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
 // bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 

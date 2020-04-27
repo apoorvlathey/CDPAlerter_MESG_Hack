@@ -16,14 +16,6 @@ const BOT_TOKEN = process.env.BOT_TOKEN || "";
 const URL = process.env.URL; // get the server config var URL
 const CHAT_ID = process.env.CHAT_ID;
 const dbUrl = process.env.DATABASE_URL;
-let PORT;
-
-if (typeof(PhusionPassenger) !== 'undefined') {
-  PhusionPassenger.configure({ autoInstall: false });
-  PORT = 'passenger'
-} else {
-  PORT = 80
-}
 
 //delete previous instance
 //axios.get(`https://api.telegram.org/bot${BOT_TOKEN}/deleteWebHook`);
@@ -40,8 +32,8 @@ mongoose
 const bot = new Telegraf(BOT_TOKEN); // get the token from envirenment variable
 
 // Config the webhook for server
-bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
-bot.startWebhook(`${URL}/bot${BOT_TOKEN}`, null, PORT);
+//bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
+//bot.startWebhook(`${URL}/bot${BOT_TOKEN}`, null, 5000);
 
 // display Welcome text when we start bot
 bot.start((ctx) =>
@@ -106,7 +98,7 @@ bot.use(stage.middleware());
 
 bot.command("setupalert", enter("initialize"));
 bot.action("SETUP_ALERT", enter("initialize"));
-//bot.startPolling(); // start
+bot.startPolling(); // start
 
 // bot.telegram.sendMessage(CHAT_ID, `Hello I am working`)
 

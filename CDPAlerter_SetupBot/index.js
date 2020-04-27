@@ -16,7 +16,7 @@ const BOT_TOKEN = process.env.BOT_TOKEN || "";
 const URL = process.env.URL; // get the server config var URL
 const CHAT_ID = process.env.CHAT_ID;
 const dbUrl = process.env.DATABASE_URL;
-const PORT;
+const PORT = '';
 
 if (typeof(PhusionPassenger) !== 'undefined') {
   PhusionPassenger.configure({ autoInstall: false });

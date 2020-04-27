@@ -6,7 +6,7 @@ const WizardScene = require("telegraf/scenes/wizard");
 const { enter, leave } = Stage
 const axios = require("axios")
 
-if(process.env.BOT_TOKEN === null){
+if(process.env.BOT_TOKEN == null){
   require('dotenv').config();
 }
 

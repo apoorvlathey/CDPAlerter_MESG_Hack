@@ -26,7 +26,7 @@ if (typeof(PhusionPassenger) !== 'undefined') {
 }
 
 //delete previous instance
-axios.get(`https://api.telegram.org/bot${BOT_TOKEN}/deleteWebHook`);
+//axios.get(`https://api.telegram.org/bot${BOT_TOKEN}/deleteWebHook`);
 
 mongoose
   .connect(dbUrl)

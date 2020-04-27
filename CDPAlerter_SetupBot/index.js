@@ -22,7 +22,7 @@ axios.get(`https://api.telegram.org/bot${BOT_TOKEN}/deleteWebHook`);
 const bot = new Telegraf(BOT_TOKEN); // get the token from envirenment variable
 
 // Config the webhook for server
-// bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
+bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
 // bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 
 // display Welcome text when we start bot

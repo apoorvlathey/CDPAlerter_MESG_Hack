@@ -1,0 +1,16 @@
+name: Telegram Send Message
+sid: telegram-send-msg
+description: "Sends Message to use via Telegram Bot"
+configuration:
+	env:
+		- BOT_TOKEN=
+tasks:
+  send:
+    inputs:
+      chatid:
+        type: Number
+      message:
+        type: String
+    outputs:
+      status:
+        type: Number

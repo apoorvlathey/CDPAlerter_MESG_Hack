@@ -1,0 +1,14 @@
+name: CDP Web3 Alerter
+sid: CDPWeb3Alerter
+description: "Checks CDP against threshold to intiate Alert"
+configuration:
+	env:
+		- INFURA_KEY=
+		-	DATABASE_URL=
+events:
+  alert:
+    data:
+      chatid:
+        type: Number
+      message:
+        type: String

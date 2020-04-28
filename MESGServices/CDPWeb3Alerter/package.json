@@ -1,0 +1,14 @@
+{
+  "name": "your-package-name",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'none'",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@mesg/service": "^0.1.0",
+    "mongoose": "^5.9.10",
+    "web3": "^1.2.7"
+  }
+}

@@ -1,11 +1,11 @@
-const Service = require('@mesg/service')
+const Service = require('@liteflow/service')
 
-const mesg = new Service()
+const liteflow = new Service()
 
-mesg.listenTask({
+liteflow.listenTask({
   taskX: require('./tasks/send')
 })
   .on('error', (error) => console.error(error))
 
-mesg.emitEvent('started', { x: true })
+liteflow.emitEvent('started', { x: true })
   .catch((error) => console.error(error))

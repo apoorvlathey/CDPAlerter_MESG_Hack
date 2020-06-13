@@ -1,5 +1,5 @@
-const Service = require('@mesg/service')
-const mesg = new Service()
+const Service = require('@liteflow/service')
+const liteflow = new Service()
 
 const web3 = require("web3");
 
